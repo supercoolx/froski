@@ -1,0 +1,151 @@
+:root {
+  font-size: 16px;
+  --main-green-col: #29b968;
+  --blur-green-col: #29b967c0;
+  --dark-green-col: #004c21;
+  --main-white-col: #ffffff;
+  --main-black-col: #000;
+  --main-yellow-col: #e7bb3f;
+  --blur-yellow-col: #e7ba3f5c;
+  --chakra-font: "Chakra Petch", sans-serif;
+  --fredoka-font: "Fredoka", sans-serif;
+  --blur-black-col: #0000002d;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: var(--fredoka-font);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link_main {
+  position: fixed;
+  z-index: 100;
+  bottom: 70px;
+  color: #212121;
+  font: var(--fredoka-font);
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0 20px;
+}
+
+body {
+  background-image: url(./assets/Fro-8.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg,
+.bg img,
+.bg source {
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.navigation {
+  --blur: 0.4rem;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  /* background-color: var(--blur-black-col); */
+  /* backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur)); */
+  /* border: 2px solid var(--main-black-col); */
+  border-right-color: transparent;
+  border-left-color: transparent;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  /* top: 100%; */
+  z-index: 100;
+  color: var(--main-white-col);
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navigation_ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navigation_ul li a {
+  position: relative;
+  width: 2.8rem;
+  aspect-ratio: 1;
+  background-color: var(--main-white-col);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 768px) {
+
+
+  body {
+    background-image: url(./assets/Fro-desk.png);
+  }
+
+  .link_main {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    right: 20px;
+    top: 40px;
+    bottom: auto;
+    gap: 10px;
+    font-size: 32px;
+    width: fit-content;
+  }
+
+  .navigation {
+    flex-direction: row;
+    padding: 1rem 2rem;
+    padding: 1rem 0.5rem;
+    background-color: transparent;
+    backdrop-filter: unset;
+    -webkit-backdrop-filter: unset;
+    border: 0px solid transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    display: flex;
+    bottom: auto;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  .navigation_ul {
+    gap: 0.625rem;
+  }
+}
